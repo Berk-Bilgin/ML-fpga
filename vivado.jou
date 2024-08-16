@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Aug  7 22:49:05 2024
+# Process ID: 792994
+# Current directory: /home/berkb/Project
+# Command line: vivado
+# Log file: /home/berkb/Project/vivado.log
+# Journal file: /home/berkb/Project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/berkb/project_1/project_1.xpr
+update_compile_order -fileset sources_1

@@ -1,0 +1,41 @@
+git-lfs/3.0.2 (GitHub; linux amd64; go 1.18.1)
+git version 2.34.1
+
+$ git-lfs prune
+Prune error: Git can't resolve ref: "HEAD"
+Prune error: error in git log: exit status 128 fatal: not a git repository (or any of the parent directories): .git
+
+
+error in git log: exit status 128 fatal: not a git repository (or any of the parent directories): .git
+
+
+Current time in UTC: 
+2024-08-16 19:33:22
+
+ENV:
+LocalWorkingDir=
+LocalGitDir=
+LocalGitStorageDir=
+LocalMediaDir=lfs/objects
+LocalReferenceDirs=
+TempDir=lfs/tmp
+ConcurrentTransfers=8
+TusTransfers=false
+BasicTransfersOnly=false
+SkipDownloadErrors=false
+FetchRecentAlways=false
+FetchRecentRefsDays=7
+FetchRecentCommitsDays=0
+FetchRecentRefsIncludeRemotes=true
+PruneOffsetDays=3
+PruneVerifyRemoteAlways=false
+PruneRemoteName=origin
+LfsStorageDir=lfs
+AccessDownload=none
+AccessUpload=none
+DownloadTransfers=basic,lfs-standalone-file,ssh
+UploadTransfers=basic,lfs-standalone-file,ssh
+GIT_EXEC_PATH=/usr/lib/git-core
+
+Client IP addresses:
+172.21.18.150 fe80::215:5dff:fe0f:19b0

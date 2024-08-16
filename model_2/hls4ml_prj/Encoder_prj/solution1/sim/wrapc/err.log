@@ -1,0 +1,16 @@
+/home/berkb/Project/model_2/hls4ml_prj/Encoder_test.cpp: In function ‘int main(int, char**)’:
+/home/berkb/Project/model_2/hls4ml_prj/Encoder_test.cpp:66:38: error: invalid initialization of reference of type ‘hls::stream<nnet::array<ap_fixed<16, 16, (ap_q_mode)1u, (ap_o_mode)0u, 0>, 16u> >&’ from expression of type ‘hls::stream<nnet::array<ap_fixed<16, 16, (ap_q_mode)0u, (ap_o_mode)0u>, 16u> >’
+             Encoder(input_time_series,layer17_out);
+                                      ^
+In file included from /home/berkb/Project/model_2/hls4ml_prj/Encoder_test.cpp:25:0:
+apatb_Encoder.h:6:13: note: in passing argument 2 of ‘void AESL_WRAP_Encoder(hls::stream<nnet::array<ap_int<16>, 1u> >&, hls::stream<nnet::array<ap_fixed<16, 16, (ap_q_mode)1u, (ap_o_mode)0u, 0>, 16u> >&)’
+ extern void AESL_WRAP_Encoder (
+             ^~~~~~~~~~~~~~~~~
+/home/berkb/Project/model_2/hls4ml_prj/Encoder_test.cpp:95:38: error: invalid initialization of reference of type ‘hls::stream<nnet::array<ap_fixed<16, 16, (ap_q_mode)1u, (ap_o_mode)0u, 0>, 16u> >&’ from expression of type ‘hls::stream<nnet::array<ap_fixed<16, 16, (ap_q_mode)0u, (ap_o_mode)0u>, 16u> >’
+         Encoder(input_time_series,layer17_out);
+                                      ^
+In file included from /home/berkb/Project/model_2/hls4ml_prj/Encoder_test.cpp:25:0:
+apatb_Encoder.h:6:13: note: in passing argument 2 of ‘void AESL_WRAP_Encoder(hls::stream<nnet::array<ap_int<16>, 1u> >&, hls::stream<nnet::array<ap_fixed<16, 16, (ap_q_mode)1u, (ap_o_mode)0u, 0>, 16u> >&)’
+ extern void AESL_WRAP_Encoder (
+             ^~~~~~~~~~~~~~~~~
+make: *** [cosim.tv.mk:59: obj/Encoder_test.cpp_pre.cpp.tb.o] Error 1

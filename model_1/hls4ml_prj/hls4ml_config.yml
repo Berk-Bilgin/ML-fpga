@@ -1,0 +1,131 @@
+Backend: Vivado
+ClockPeriod: 10
+HLSConfig:
+  LayerName:
+    flatten_4:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+      Trace: false
+    input_time_series:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        result: ap_int<16>
+      Trace: false
+    q_activation_20:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+      Trace: false
+    q_activation_21:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+      Trace: false
+    q_activation_22:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+      Trace: false
+    q_activation_23:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+      Trace: false
+    q_activation_24:
+      Precision:
+        result: ap_fixed<16, 16, AP_RND_ZERO, AP_SAT>
+      Strategy: Stable
+      Trace: false
+    q_conv1d_16:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        bias: fixed<12,1>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+        weight: fixed<12,1>
+      Trace: false
+    q_conv1d_16_linear:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+      Trace: false
+    q_conv1d_17:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        bias: fixed<12,1>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+        weight: fixed<12,1>
+      Trace: false
+    q_conv1d_17_linear:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+      Trace: false
+    q_conv1d_18:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        bias: fixed<12,1>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+        weight: fixed<12,1>
+      Trace: false
+    q_conv1d_18_linear:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+      Trace: false
+    q_conv1d_19:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        bias: fixed<12,1>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+        weight: fixed<12,1>
+      Trace: false
+    q_conv1d_19_linear:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+      Trace: false
+    q_dense_4:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        bias: fixed<12,1>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+        weight: fixed<12,1>
+      Trace: false
+    q_dense_4_linear:
+      Precision:
+        Bias: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        Weight: ap_fixed<12, 1, AP_RND_ZERO, AP_SAT>
+        result: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+      Trace: false
+  Model:
+    BramFactor: 1000000000
+    Precision: ap_fixed<28, 16, AP_RND_ZERO, AP_SAT>
+    ReuseFactor: 1
+    Strategy: Latency
+    TraceOutput: false
+IOType: io_stream
+InputData: inputData.npy
+KerasModel: !keras_model 'model_1/hls4ml_prj/keras_model.h5'
+OutputData: outputData.npy
+OutputDir: model_1/hls4ml_prj
+Part: xcvu13p-flga2577-2-e
+ProjectName: Encoder
+Stamp: 399E667E
+Version: 1.0.0
+XilinxPart: xcvu13p-flga2577-2-e

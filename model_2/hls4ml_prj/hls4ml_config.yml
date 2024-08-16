@@ -1,0 +1,130 @@
+Backend: Vivado
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    flatten_1:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+      Trace: false
+    input_time_series:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        result: ap_int<16>
+      Trace: false
+    q_activation_4:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+      Trace: false
+    q_activation_5:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+      Trace: false
+    q_activation_6:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+      Trace: false
+    q_activation_7:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+      Trace: false
+    q_activation_8:
+      Precision:
+        result: ap_fixed<16, 16, AP_RND, AP_SAT>
+      Strategy: Stable
+      Trace: false
+    q_conv1d_4:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        bias: fixed<8,1>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+        weight: fixed<8,1>
+      Trace: false
+    q_conv1d_4_linear:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+      Trace: false
+    q_conv1d_5:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        bias: fixed<8,1>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+        weight: fixed<8,1>
+      Trace: false
+    q_conv1d_5_linear:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+      Trace: false
+    q_conv1d_6:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        bias: fixed<8,1>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+        weight: fixed<8,1>
+      Trace: false
+    q_conv1d_6_linear:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+      Trace: false
+    q_conv1d_7:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        bias: fixed<8,1>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+        weight: fixed<8,1>
+      Trace: false
+    q_conv1d_7_linear:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+      Trace: false
+    q_dense_1:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        bias: fixed<8,1>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+        weight: fixed<8,1>
+      Trace: false
+    q_dense_1_linear:
+      Precision:
+        Bias: ap_fixed<8, 1, AP_RND, AP_SAT>
+        Weight: ap_fixed<8, 1, AP_RND, AP_SAT>
+        result: ap_fixed<24, 16, AP_RND, AP_SAT>
+      Trace: false
+  Model:
+    BramFactor: 1000000000
+    Precision: ap_fixed<24, 16, AP_RND, AP_SAT>
+    ReuseFactor: 2
+    Strategy: Resource
+    TraceOutput: false
+IOType: io_stream
+KerasModel: !keras_model 'model_2/hls4ml_prj/keras_model.h5'
+OutputDir: model_2/hls4ml_prj
+Part: xcku15p-ffve1517-1-i
+ProjectName: Encoder
+Stamp: 4bBDe1c5
+Version: 1.0.0
+clock_period: 10
+input_data_tb: model_2/outputData.npy

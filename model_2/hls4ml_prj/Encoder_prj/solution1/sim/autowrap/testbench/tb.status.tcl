@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/berkb/Project/model_2/hls4ml_prj/Encoder_prj/solution1/./sim/autowrap/testbench/Encoder.cpp_pre.cpp.tb.cpp

@@ -1,0 +1,12 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "/tools/Xilinx/Vivado/2020.1/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling Encoder.cpp_pre.cpp.tb.cpp
+   Compiling Encoder_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_Encoder.cpp
+   Generating cosim.tv.exe
+ERROR: [COSIM-317] C++ compile error.
+ERROR: [COSIM-321] EXE file generate failed.
+ERROR: [COSIM-321] EXE file generate failed.
+ERROR: [COSIM-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM-5] *** C/RTL co-simulation file generation failed. ***

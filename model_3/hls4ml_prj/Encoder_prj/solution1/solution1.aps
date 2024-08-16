@@ -1,0 +1,25 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="Encoder_prj"/>
+    </project>
+    <config>
+        <config_array_partition maximum_size="4096"/>
+        <config_compile name_max_length="80"/>
+        <config_schedule enable_dsp_full_reg="0"/>
+        <schedule model="Encoder"/>
+    </config>
+    <targetInfo>
+        <TargetInfo value="xc7a200tl:-ffg1156:-2L"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/artix7/artix7" name="DefaultPlatform"/>
+        <library value="xilinx/artix7/artix7_fpv6" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock default="false" name="default" uncertainty="12.5%" period="10"/>
+    </clockList>
+</AutoPilot:solution>
+

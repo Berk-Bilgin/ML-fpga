@@ -1,0 +1,947 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [HLS 200-10] Setting target device to 'xc7a200tl-ffg1156-2L'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/Encoder.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/Encoder.cpp:45:74
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/Encoder.cpp:45:78
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/Encoder.cpp:53:74
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/Encoder.cpp:53:78
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/Encoder.cpp:61:74
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/Encoder.cpp:61:78
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/Encoder.cpp:69:77
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/Encoder.cpp:69:82
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/Encoder.cpp:74:72
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/Encoder.cpp:74:77
+WARNING: [HLS 200-471] Dataflow form checks found 10 issue(s) in file firmware/Encoder.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1626.762 ; gain = 1225.754 ; free physical = 4196 ; free virtual = 14941
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1626.762 ; gain = 1225.754 ; free physical = 4196 ; free virtual = 14941
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftChannel' (firmware/nnet_utils/nnet_conv_stream.h:169) in function 'void nnet::kernel_shift_1d<nnet::array<ap_int<16>, 1u>, config2>(FORWARD_REFERENCE const&, FORWARD_REFERENCE::value_type*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'KernelPushChannel' (firmware/nnet_utils/nnet_conv_stream.h:179) in function 'void nnet::kernel_shift_1d<nnet::array<ap_int<16>, 1u>, config2>(FORWARD_REFERENCE const&, FORWARD_REFERENCE::value_type*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_padding_stream.h:11) in function 'void nnet::fill_zero<nnet::array<ap_int<16>, 1u>, config18>(hls::stream<FORWARD_REFERENCE, 0>&)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_padding_stream.h:22) in function 'void nnet::fill_data<nnet::array<ap_int<16>, 1u>, nnet::array<ap_int<16>, 1u>, config18>(hls::stream<FORWARD_REFERENCE, 0>&, hls::stream<FORWARD_REFERENCE, 0>&)' completely with a factor of 1.
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_int<16>, 1u>::operator[].1' into 'nnet::fill_zero<nnet::array<ap_int<16>, 1u>, config18>' (firmware/nnet_utils/nnet_padding_stream.h:13).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_int<16>, 1u>::operator[].1' into 'nnet::fill_data<nnet::array<ap_int<16>, 1u>, nnet::array<ap_int<16>, 1u>, config18>' (firmware/nnet_utils/nnet_padding_stream.h:24).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_int<16>, 1u>::operator[].1' into 'nnet::fill_data<nnet::array<ap_int<16>, 1u>, nnet::array<ap_int<16>, 1u>, config18>' (firmware/nnet_utils/nnet_padding_stream.h:24).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_int<16>, 1u>, config18>' into 'nnet::zeropad1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_int<16>, 1u>, config18>' (firmware/nnet_utils/nnet_padding_stream.h:43).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_int<16>, 1u>, config18>' into 'nnet::zeropad1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_int<16>, 1u>, config18>' (firmware/nnet_utils/nnet_padding_stream.h:33).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data<nnet::array<ap_int<16>, 1u>, nnet::array<ap_int<16>, 1u>, config18>' into 'nnet::zeropad1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_int<16>, 1u>, config18>' (firmware/nnet_utils/nnet_padding_stream.h:38).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_int<16>, 1u>::operator[]' into 'nnet::kernel_shift_1d<nnet::array<ap_int<16>, 1u>, config2>' (firmware/nnet_utils/nnet_conv_stream.h:181).
+INFO: [XFORM 203-603] Inlining function 'nnet::kernel_shift_1d<nnet::array<ap_int<16>, 1u>, config2>' into 'nnet::compute_output_buffer_1d<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' (firmware/nnet_utils/nnet_conv_stream.h:357).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_int<16>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_resource_rf_leq_nin<ap_int<16>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config2_mult>' (firmware/nnet_utils/nnet_dense_resource.h:56).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource_rf_leq_nin<ap_int<16>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config2_mult>' into 'nnet::dense_resource<ap_int<16>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config2_mult>' (firmware/nnet_utils/nnet_dense_resource.h:253).
+INFO: [XFORM 203-603] Inlining function 'nnet::cast<ap_int<16>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config2_mult>' into 'nnet::dense_resource<ap_int<16>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config2_mult>' (firmware/nnet_utils/nnet_dense_resource.h:79->firmware/nnet_utils/nnet_dense_resource.h:253).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>::operator[].1' into 'nnet::compute_output_buffer_1d<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' (firmware/nnet_utils/nnet_conv_stream.h:376).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>::operator[].1' into 'nnet::fill_data<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' (firmware/nnet_utils/nnet_padding_stream.h:24).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>::operator[].1' into 'nnet::fill_data<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' (firmware/nnet_utils/nnet_padding_stream.h:24).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>::operator[].1' into 'nnet::fill_zero<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' (firmware/nnet_utils/nnet_padding_stream.h:13).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>::operator[].1' into 'nnet::compute_output_buffer_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' (firmware/nnet_utils/nnet_conv_stream.h:376).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>::operator[].1' into 'nnet::fill_data<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' (firmware/nnet_utils/nnet_padding_stream.h:24).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>::operator[].1' into 'nnet::fill_data<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' (firmware/nnet_utils/nnet_padding_stream.h:24).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>::operator[].1' into 'nnet::fill_zero<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' (firmware/nnet_utils/nnet_padding_stream.h:13).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource<ap_int<16>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config2_mult>' into 'nnet::compute_output_buffer_1d<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' (firmware/nnet_utils/nnet_conv_stream.h:368).
+INFO: [XFORM 203-603] Inlining function 'nnet::compute_output_buffer_1d<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' into 'nnet::conv_1d_buffer_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' (firmware/nnet_utils/nnet_conv1d_stream.h:69).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_1d_buffer_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' into 'nnet::conv_1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' (firmware/nnet_utils/nnet_conv1d_stream.h:80).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' into 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' (firmware/nnet_utils/nnet_padding_stream.h:43).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' into 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' (firmware/nnet_utils/nnet_padding_stream.h:33).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' into 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' (firmware/nnet_utils/nnet_padding_stream.h:38).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>::operator[]' into 'nnet::kernel_shift_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' (firmware/nnet_utils/nnet_conv_stream.h:181).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>::operator[]' into 'nnet::kernel_shift_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config8>' (firmware/nnet_utils/nnet_conv_stream.h:181).
+INFO: [XFORM 203-603] Inlining function 'nnet::kernel_shift_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' into 'nnet::compute_output_buffer_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' (firmware/nnet_utils/nnet_conv_stream.h:357).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_resource_rf_leq_nin<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config5_mult>' (firmware/nnet_utils/nnet_dense_resource.h:56).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_resource_rf_leq_nin<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config8_mult>' (firmware/nnet_utils/nnet_dense_resource.h:56).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_resource_rf_leq_nin<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config11_mult>' (firmware/nnet_utils/nnet_dense_resource.h:56).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_resource_rf_leq_nin<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>' (firmware/nnet_utils/nnet_dense_resource.h:56).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource_rf_leq_nin<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config5_mult>' into 'nnet::dense_resource<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config5_mult>' (firmware/nnet_utils/nnet_dense_resource.h:253).
+INFO: [XFORM 203-603] Inlining function 'nnet::cast<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config5_mult>' into 'nnet::dense_resource<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config5_mult>' (firmware/nnet_utils/nnet_dense_resource.h:79->firmware/nnet_utils/nnet_dense_resource.h:253).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config5_mult>' into 'nnet::compute_output_buffer_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' (firmware/nnet_utils/nnet_conv_stream.h:368).
+INFO: [XFORM 203-603] Inlining function 'nnet::compute_output_buffer_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' into 'nnet::conv_1d_buffer_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' (firmware/nnet_utils/nnet_conv1d_stream.h:69).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_1d_buffer_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' into 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' (firmware/nnet_utils/nnet_conv1d_stream.h:80).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' into 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' (firmware/nnet_utils/nnet_padding_stream.h:43).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' into 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' (firmware/nnet_utils/nnet_padding_stream.h:33).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' into 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' (firmware/nnet_utils/nnet_padding_stream.h:38).
+INFO: [XFORM 203-603] Inlining function 'nnet::kernel_shift_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config8>' into 'nnet::compute_output_buffer_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' (firmware/nnet_utils/nnet_conv_stream.h:357).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource_rf_leq_nin<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config8_mult>' into 'nnet::dense_resource<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config8_mult>' (firmware/nnet_utils/nnet_dense_resource.h:253).
+INFO: [XFORM 203-603] Inlining function 'nnet::cast<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config8_mult>' into 'nnet::dense_resource<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config8_mult>' (firmware/nnet_utils/nnet_dense_resource.h:79->firmware/nnet_utils/nnet_dense_resource.h:253).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>::operator[]' into 'nnet::compute_output_buffer_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' (firmware/nnet_utils/nnet_conv_stream.h:376).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>::operator[]' into 'nnet::fill_data<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' (firmware/nnet_utils/nnet_padding_stream.h:24).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>::operator[]' into 'nnet::fill_data<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' (firmware/nnet_utils/nnet_padding_stream.h:24).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>::operator[]' into 'nnet::fill_zero<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' (firmware/nnet_utils/nnet_padding_stream.h:13).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>::operator[]' into 'nnet::compute_output_buffer_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' (firmware/nnet_utils/nnet_conv_stream.h:376).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>::operator[]' into 'nnet::dense<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, config15>' (firmware/nnet_utils/nnet_dense_stream.h:44).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config8_mult>' into 'nnet::compute_output_buffer_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' (firmware/nnet_utils/nnet_conv_stream.h:368).
+INFO: [XFORM 203-603] Inlining function 'nnet::compute_output_buffer_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' into 'nnet::conv_1d_buffer_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' (firmware/nnet_utils/nnet_conv1d_stream.h:69).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_1d_buffer_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' into 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' (firmware/nnet_utils/nnet_conv1d_stream.h:80).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' into 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' (firmware/nnet_utils/nnet_padding_stream.h:43).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' into 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' (firmware/nnet_utils/nnet_padding_stream.h:33).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' into 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' (firmware/nnet_utils/nnet_padding_stream.h:38).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>::operator[].1' into 'nnet::kernel_shift_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' (firmware/nnet_utils/nnet_conv_stream.h:181).
+INFO: [XFORM 203-603] Inlining function 'nnet::kernel_shift_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' into 'nnet::compute_output_buffer_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' (firmware/nnet_utils/nnet_conv_stream.h:357).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource_rf_leq_nin<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config11_mult>' into 'nnet::dense_resource<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config11_mult>' (firmware/nnet_utils/nnet_dense_resource.h:253).
+INFO: [XFORM 203-603] Inlining function 'nnet::cast<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config11_mult>' into 'nnet::dense_resource<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config11_mult>' (firmware/nnet_utils/nnet_dense_resource.h:79->firmware/nnet_utils/nnet_dense_resource.h:253).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config11_mult>' into 'nnet::compute_output_buffer_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' (firmware/nnet_utils/nnet_conv_stream.h:368).
+INFO: [XFORM 203-603] Inlining function 'nnet::compute_output_buffer_1d<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' into 'nnet::conv_1d_buffer_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' (firmware/nnet_utils/nnet_conv1d_stream.h:69).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_1d_buffer_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' into 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' (firmware/nnet_utils/nnet_conv1d_stream.h:80).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource_rf_leq_nin<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>' into 'nnet::dense_resource<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>' (firmware/nnet_utils/nnet_dense_resource.h:253).
+INFO: [XFORM 203-603] Inlining function 'nnet::cast<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>' into 'nnet::dense_resource<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>' (firmware/nnet_utils/nnet_dense_resource.h:79->firmware/nnet_utils/nnet_dense_resource.h:253).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>' into 'nnet::dense_wrapper<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>' (firmware/nnet_utils/nnet_dense_stream.h:21).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>::operator[]' into 'nnet::linear<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, nnet::array<ap_fixed<16, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, linear_config17>' (firmware/nnet_utils/nnet_activation_stream.h:29).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>::operator[]' into 'nnet::dense<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, config15>' (firmware/nnet_utils/nnet_dense_stream.h:60).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<16, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>::operator[]' into 'nnet::linear<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, nnet::array<ap_fixed<16, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, linear_config17>' (firmware/nnet_utils/nnet_activation_stream.h:29).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1626.762 ; gain = 1225.754 ; free physical = 4162 ; free virtual = 14917
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1626.762 ; gain = 1225.754 ; free physical = 4150 ; free virtual = 14907
+INFO: [XFORM 203-1101] Packing variable 'out_data.data.V' (firmware/nnet_utils/nnet_activation_stream.h:23) into a 256-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'res_pack.data.V' (firmware/nnet_utils/nnet_dense_stream.h:55) into a 384-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'res_pack.data.V' (firmware/nnet_utils/nnet_conv_stream.h:353) into a 192-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'res_pack.data.V' (firmware/nnet_utils/nnet_conv_stream.h:353) into a 192-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'res_pack.data.V' (firmware/nnet_utils/nnet_conv_stream.h:353) into a 96-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'res_pack.data.V' (firmware/nnet_utils/nnet_conv_stream.h:353) into a 96-bit variable.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::linear<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, nnet::array<ap_fixed<16, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, linear_config17>' (firmware/nnet_utils/nnet_activation_stream.h:19:42).
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'DataPrepare' (firmware/nnet_utils/nnet_dense_stream.h:36) in function 'nnet::dense<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, config15>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ReuseLoop' (firmware/nnet_utils/nnet_dense_resource.h:43) in function 'nnet::conv_1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'KernelShiftWidth' (firmware/nnet_utils/nnet_conv_stream.h:166) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ReuseLoop' (firmware/nnet_utils/nnet_dense_resource.h:43) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'KernelShiftWidth' (firmware/nnet_utils/nnet_conv_stream.h:166) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ReuseLoop' (firmware/nnet_utils/nnet_dense_resource.h:43) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'KernelShiftWidth' (firmware/nnet_utils/nnet_conv_stream.h:166) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ReuseLoop' (firmware/nnet_utils/nnet_dense_resource.h:43) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ReuseLoop' (firmware/nnet_utils/nnet_dense_resource.h:43) in function 'nnet::dense_wrapper<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_padding_stream.h:11) in function 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_padding_stream.h:22) in function 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_padding_stream.h:11) in function 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_padding_stream.h:11) in function 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_padding_stream.h:22) in function 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_padding_stream.h:11) in function 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_padding_stream.h:11) in function 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_padding_stream.h:22) in function 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_padding_stream.h:11) in function 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'LinearPackLoop' (firmware/nnet_utils/nnet_activation_stream.h:27) in function 'nnet::linear<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, nnet::array<ap_fixed<16, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, linear_config17>' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'DataPack' (firmware/nnet_utils/nnet_dense_stream.h:42) in function 'nnet::dense<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, config15>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'ResPack' (firmware/nnet_utils/nnet_dense_stream.h:58) in function 'nnet::dense<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, config15>' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:37) in function 'nnet::conv_1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_dense_resource.h:52) in function 'nnet::conv_1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_resource.h:77) in function 'nnet::conv_1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'CastLoop' (firmware/nnet_utils/nnet_conv_stream.h:374) in function 'nnet::conv_1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftChannel' (firmware/nnet_utils/nnet_conv_stream.h:169) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'KernelPushChannel' (firmware/nnet_utils/nnet_conv_stream.h:179) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:37) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_dense_resource.h:52) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' completely with a factor of 160.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_resource.h:77) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'CastLoop' (firmware/nnet_utils/nnet_conv_stream.h:374) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftChannel' (firmware/nnet_utils/nnet_conv_stream.h:169) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'KernelPushChannel' (firmware/nnet_utils/nnet_conv_stream.h:179) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:37) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_dense_resource.h:52) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' completely with a factor of 80.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_resource.h:77) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'CastLoop' (firmware/nnet_utils/nnet_conv_stream.h:374) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftChannel' (firmware/nnet_utils/nnet_conv_stream.h:169) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'KernelPushChannel' (firmware/nnet_utils/nnet_conv_stream.h:179) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:37) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_dense_resource.h:52) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' completely with a factor of 40.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_resource.h:77) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'CastLoop' (firmware/nnet_utils/nnet_conv_stream.h:374) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:37) in function 'nnet::dense_wrapper<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_dense_resource.h:52) in function 'nnet::dense_wrapper<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>' completely with a factor of 512.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_resource.h:77) in function 'nnet::dense_wrapper<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>' completely with a factor of 16.
+INFO: [XFORM 203-102] Partitioning array 'res_part.data.V.5' (firmware/nnet_utils/nnet_padding_stream.h:21) automatically.
+INFO: [XFORM 203-102] Partitioning array 'res_part.data.V.2' (firmware/nnet_utils/nnet_padding_stream.h:21) automatically.
+INFO: [XFORM 203-102] Partitioning array 'res_part.data.V.8' (firmware/nnet_utils/nnet_padding_stream.h:21) automatically.
+INFO: [XFORM 203-102] Partitioning array 'res_part.data.V' (firmware/nnet_utils/nnet_padding_stream.h:10) automatically.
+INFO: [XFORM 203-102] Partitioning array 'res_part.data.V.9' (firmware/nnet_utils/nnet_padding_stream.h:10) automatically.
+INFO: [XFORM 203-131] Reshaping array 'w2.V'  in dimension 1 with a block factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'w5.V'  in dimension 1 with a block factor of 160.
+INFO: [XFORM 203-131] Reshaping array 'w8.V'  in dimension 1 with a block factor of 80.
+INFO: [XFORM 203-131] Reshaping array 'w11.V'  in dimension 1 with a block factor of 40.
+INFO: [XFORM 203-131] Reshaping array 'w15.V'  in dimension 1 with a block factor of 512.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'input_time_series.V.data.V' (firmware/Encoder.cpp:7) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer18_out.V.data.V' (firmware/Encoder.cpp:39) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer5_out.V.data.V' (firmware/Encoder.cpp:51) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer20_out.V.data.V' (firmware/Encoder.cpp:55) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer2_out.V.data.V' (firmware/Encoder.cpp:43) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer19_out.V.data.V' (firmware/Encoder.cpp:47) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer8_out.V.data.V' (firmware/Encoder.cpp:59) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer21_out.V.data.V' (firmware/Encoder.cpp:63) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer15_out.V.data.V' (firmware/Encoder.cpp:72) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer17_out.V.data.V' (firmware/Encoder.cpp:8) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer11_out.V.data.V' (firmware/Encoder.cpp:67) .
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V.4' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V' in dimension 1 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'data.V' (firmware/nnet_utils/nnet_dense_stream.h:29) accessed through non-constant indices on dimension 1 (firmware/nnet_utils/nnet_dense_stream.h:44:39), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'data.V' (firmware/nnet_utils/nnet_dense_stream.h:29) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'res'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'kernel_data.V.3'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'res_out.i.i'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b2.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_resource.h:33) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V.16' in dimension 1 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'kernel_data.V.2'  accessed through non-constant indices on dimension 1 (firmware/nnet_utils/nnet_dense_resource.h:56:17), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'kernel_data.V.2'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'res_out.i.i'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b5.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_resource.h:33) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V.17' in dimension 1 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'kernel_data.V.1'  accessed through non-constant indices on dimension 1 (firmware/nnet_utils/nnet_dense_resource.h:56:17), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'kernel_data.V.1'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'res_out.V' (firmware/nnet_utils/nnet_conv_stream.h:350) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b8.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_resource.h:33) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'kernel_data.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'res_out.V' (firmware/nnet_utils/nnet_conv_stream.h:350) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b11.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_resource.h:33) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b15.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_resource.h:33) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'input_time_series.V.data.V' (firmware/Encoder.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer18_out.V.data.V' (firmware/Encoder.cpp:39) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer5_out.V.data.V' (firmware/Encoder.cpp:51) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer20_out.V.data.V' (firmware/Encoder.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer2_out.V.data.V' (firmware/Encoder.cpp:43) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer19_out.V.data.V' (firmware/Encoder.cpp:47) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer8_out.V.data.V' (firmware/Encoder.cpp:59) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer21_out.V.data.V' (firmware/Encoder.cpp:63) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer15_out.V.data.V' (firmware/Encoder.cpp:72) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer17_out.V.data.V' (firmware/Encoder.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer11_out.V.data.V' (firmware/Encoder.cpp:67) in dimension 1 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'data.V' (firmware/nnet_utils/nnet_dense_stream.h:29) accessed through non-constant indices on dimension 1 (firmware/nnet_utils/nnet_dense_resource.h:56:17), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-712] Applying dataflow to function 'Encoder', detected/extracted 10 process function(s): 
+	 'nnet::zeropad1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_int<16>, 1u>, config18>'
+	 'nnet::conv_1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>'
+	 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>'
+	 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>'
+	 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>'
+	 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>'
+	 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>'
+	 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>'
+	 'nnet::dense<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, config15>'
+	 'nnet::linear<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, nnet::array<ap_fixed<16, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, linear_config17>'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (firmware/nnet_utils/nnet_activation_stream.h:34:1) in function 'nnet::linear<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, nnet::array<ap_fixed<16, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, linear_config17>'... converting 33 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_dense_resource.h:43:44) to (firmware/nnet_utils/nnet_dense_resource.h:43:37) in function 'nnet::dense_wrapper<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>'... converting 4097 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_dense_resource.h:43:44) to (firmware/nnet_utils/nnet_dense_resource.h:43:37) in function 'nnet::conv_1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>'... converting 65 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_dense_resource.h:43:44) to (firmware/nnet_utils/nnet_dense_resource.h:43:37) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>'... converting 1281 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_dense_resource.h:43:44) to (firmware/nnet_utils/nnet_dense_resource.h:43:37) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>'... converting 641 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_dense_resource.h:43:44) to (firmware/nnet_utils/nnet_dense_resource.h:43:37) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>'... converting 321 basic blocks.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.3i16P.i2' into 'nnet::conv_1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' (firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.3i16P.i2' into 'nnet::conv_1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' (firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:10:13 ; elapsed = 00:10:15 . Memory (MB): peak = 1626.762 ; gain = 1225.754 ; free physical = 3604 ; free virtual = 14368
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'ReadInputWidth' (firmware/nnet_utils/nnet_conv1d_stream.h:64:65) in function 'nnet::conv_1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'ReadInputWidth' (firmware/nnet_utils/nnet_conv1d_stream.h:64:65) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'ReadInputWidth' (firmware/nnet_utils/nnet_conv1d_stream.h:64:65) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'ReadInputWidth' (firmware/nnet_utils/nnet_conv1d_stream.h:64:65) in function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_int<16>, 1u>, config18>' to 'zeropad1d_cl<array<ap_int<16>, 1u>, array<ap_int<16>, 1u>, config18>' (firmware/nnet_utils/nnet_padding_stream.h:15:45)
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config20>' to 'zeropad1d_cl<array,array<ap_fixed<24,16,0,0,0>,8u>,config20>' (firmware/nnet_utils/nnet_padding_stream.h:15:46)
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config19>' to 'zeropad1d_cl<array,array<ap_fixed<24,16,0,0,0>,8u>,config19>' (firmware/nnet_utils/nnet_padding_stream.h:15:46)
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config21>' to 'zeropad1d_cl<array,array<ap_fixed<24,16,0,0,0>,4u>,config21>' (firmware/nnet_utils/nnet_padding_stream.h:15:46)
+WARNING: [XFORM 203-631] Renaming function 'nnet::linear<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, nnet::array<ap_fixed<16, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, linear_config17>' to 'linear<array,array<ap_fixed<16,16,0,0,0>,16u>,linear_config17>' (firmware/nnet_utils/nnet_activation_stream.h:19:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::dense_wrapper<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, config15>' to 'dense_wrapper<ap_fixed<24, 16, 0, 0, 0>, ap_fixed<24, 16, 0, 0, 0>, config15>' (firmware/nnet_utils/nnet_dense_stream.h:13)
+WARNING: [XFORM 203-631] Renaming function 'nnet::dense<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 16u>, config15>' to 'dense<array<ap_fixed,4u>,array<ap_fixed<24,16,0,0,0>,16u>,config15>' (firmware/nnet_utils/nnet_dense_stream.h:36:39)
+WARNING: [XFORM 203-631] Renaming function 'nnet::conv_1d_cl<nnet::array<ap_int<16>, 1u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config2>' to 'conv_1d_cl<array<ap_int<16>, 1u>, array<ap_fixed<24, 16, 0, 0, 0>, 8u>, config2>' (firmware/nnet_utils/nnet_conv1d_stream.h:1:56)
+WARNING: [XFORM 203-631] Renaming function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, config5>' to 'conv_1d_cl<array<ap_fixed,8u>,array<ap_fixed<24,16,0,0,0>,8u>,config5>' (firmware/nnet_utils/nnet_conv_stream.h:43:43)
+WARNING: [XFORM 203-631] Renaming function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 8u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config8>' to 'conv_1d_cl<array<ap_fixed,8u>,array<ap_fixed<24,16,0,0,0>,4u>,config8>' (firmware/nnet_utils/nnet_conv_stream.h:43:43)
+WARNING: [XFORM 203-631] Renaming function 'nnet::conv_1d_cl<nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<24, 16, (ap_q_mode)0, (ap_o_mode)0, 0>, 4u>, config11>' to 'conv_1d_cl<array<ap_fixed,4u>,array<ap_fixed<24,16,0,0,0>,4u>,config11>' (firmware/nnet_utils/nnet_conv_stream.h:43:43)
+WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'ReadInputWidth' in function 'conv_1d_cl<array<ap_int<16>, 1u>, array<ap_fixed<24, 16, 0, 0, 0>, 8u>, config2>'.
+WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'ReadInputWidth' in function 'conv_1d_cl<array<ap_fixed,8u>,array<ap_fixed<24,16,0,0,0>,8u>,config5>'.
+WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'ReadInputWidth' in function 'conv_1d_cl<array<ap_fixed,8u>,array<ap_fixed<24,16,0,0,0>,4u>,config8>'.
+WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'ReadInputWidth' in function 'conv_1d_cl<array<ap_fixed,4u>,array<ap_fixed<24,16,0,0,0>,4u>,config11>'.
+INFO: [XFORM 203-531] Rewinding loop 'ReuseLoop' (firmware/nnet_utils/nnet_dense_resource.h:43) in function 'dense_wrapper<ap_fixed<24, 16, 0, 0, 0>, ap_fixed<24, 16, 0, 0, 0>, config15>'.
+WARNING: [XFORM 203-532] Unable to rewind loop 'ReadInputWidth' (firmware/nnet_utils/nnet_conv1d_stream.h:64) in function 'conv_1d_cl<array<ap_int<16>, 1u>, array<ap_fixed<24, 16, 0, 0, 0>, 8u>, config2>': loop nest is not flattened.
+WARNING: [XFORM 203-532] Unable to rewind loop 'ReadInputWidth' (firmware/nnet_utils/nnet_conv1d_stream.h:64) in function 'conv_1d_cl<array<ap_fixed,8u>,array<ap_fixed<24,16,0,0,0>,8u>,config5>': loop nest is not flattened.
+WARNING: [XFORM 203-532] Unable to rewind loop 'ReadInputWidth' (firmware/nnet_utils/nnet_conv1d_stream.h:64) in function 'conv_1d_cl<array<ap_fixed,8u>,array<ap_fixed<24,16,0,0,0>,4u>,config8>': loop nest is not flattened.
+WARNING: [XFORM 203-532] Unable to rewind loop 'ReadInputWidth' (firmware/nnet_utils/nnet_conv1d_stream.h:64) in function 'conv_1d_cl<array<ap_fixed,4u>,array<ap_fixed<24,16,0,0,0>,4u>,config11>': loop nest is not flattened.
+WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'ReuseLoop' in function 'dense_wrapper<ap_fixed<24, 16, 0, 0, 0>, ap_fixed<24, 16, 0, 0, 0>, config15>'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:17:01 ; elapsed = 00:17:03 . Memory (MB): peak = 1626.762 ; gain = 1225.754 ; free physical = 3534 ; free virtual = 14300
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Encoder' ...
+WARNING: [SYN 201-103] Legalizing function name 'zeropad1d_cl<array<ap_int<16>, 1u>, array<ap_int<16>, 1u>, config18>' to 'zeropad1d_cl_array_ap_int_16_1u_array_ap_int_16_1u_config18_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv_1d_cl<array<ap_int<16>, 1u>, array<ap_fixed<24, 16, 0, 0, 0>, 8u>, config2>' to 'conv_1d_cl_array_ap_int_16_1u_array_ap_fixed_24_16_0_0_0_8u_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'zeropad1d_cl<array,array<ap_fixed<24,16,0,0,0>,8u>,config19>' to 'zeropad1d_cl_array_array_ap_fixed_24_16_0_0_0_8u_config19_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv_1d_cl<array<ap_fixed,8u>,array<ap_fixed<24,16,0,0,0>,8u>,config5>' to 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_8u_config5_s'.
+WARNING: [SYN 201-103] Legalizing function name 'zeropad1d_cl<array,array<ap_fixed<24,16,0,0,0>,8u>,config20>' to 'zeropad1d_cl_array_array_ap_fixed_24_16_0_0_0_8u_config20_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv_1d_cl<array<ap_fixed,8u>,array<ap_fixed<24,16,0,0,0>,4u>,config8>' to 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_4u_config8_s'.
+WARNING: [SYN 201-103] Legalizing function name 'zeropad1d_cl<array,array<ap_fixed<24,16,0,0,0>,4u>,config21>' to 'zeropad1d_cl_array_array_ap_fixed_24_16_0_0_0_4u_config21_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv_1d_cl<array<ap_fixed,4u>,array<ap_fixed<24,16,0,0,0>,4u>,config11>' to 'conv_1d_cl_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_4u_config11_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dense_wrapper<ap_fixed<24, 16, 0, 0, 0>, ap_fixed<24, 16, 0, 0, 0>, config15>' to 'dense_wrapper_ap_fixed_24_16_0_0_0_ap_fixed_24_16_0_0_0_config15_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dense<array<ap_fixed,4u>,array<ap_fixed<24,16,0,0,0>,16u>,config15>' to 'dense_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_16u_config15_s'.
+WARNING: [SYN 201-103] Legalizing function name 'linear<array,array<ap_fixed<16,16,0,0,0>,16u>,linear_config17>' to 'linear_array_array_ap_fixed_16_16_0_0_0_16u_linear_config17_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad1d_cl_array_ap_int_16_1u_array_ap_int_16_1u_config18_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1022.83 seconds; current allocated memory: 582.276 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 582.385 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_1d_cl_array_ap_int_16_1u_array_ap_fixed_24_16_0_0_0_8u_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'KernelShiftWidth'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'ReuseLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 583.923 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.47 seconds; current allocated memory: 585.482 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad1d_cl_array_array_ap_fixed_24_16_0_0_0_8u_config19_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.67 seconds; current allocated memory: 585.892 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 586.251 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_8u_config5_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'KernelShiftWidth'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'ReuseLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+WARNING: [SCHED 204-21] Estimated clock period (85.56ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_8u_config5_s' consists of the following:
+	'phi' operation ('tmp.data[0].V') with incoming values : ('tmp.data[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [346]  (0 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [396]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [404]  (1.13 ns)
+	'select' operation ('select_ln340_2065', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [405]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [442]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [450]  (1.13 ns)
+	'select' operation ('select_ln340_2067', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [451]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [488]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [496]  (1.13 ns)
+	'select' operation ('select_ln340_2069', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [497]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [534]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [542]  (1.13 ns)
+	'select' operation ('select_ln340_2071', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [543]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [580]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [588]  (1.13 ns)
+	'select' operation ('select_ln340_2073', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [589]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [626]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [634]  (1.13 ns)
+	'select' operation ('select_ln340_2075', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [635]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [672]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [680]  (1.13 ns)
+	'select' operation ('select_ln340_2077', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [681]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [718]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [726]  (1.13 ns)
+	'select' operation ('select_ln340_2079', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [727]  (1.13 ns)
+	'add' operation ('add_ln1192_526', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [762]  (2.01 ns)
+	'and' operation ('and_ln786_1569', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [767]  (0 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [772]  (1.13 ns)
+	'select' operation ('select_ln340_2081', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [773]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [810]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [818]  (1.13 ns)
+	'select' operation ('select_ln340_2083', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [819]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [856]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [864]  (1.13 ns)
+	'select' operation ('select_ln340_2085', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [865]  (1.13 ns)
+	'add' operation ('add_ln1192_529', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [900]  (2.01 ns)
+	'and' operation ('and_ln786_1575', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [905]  (0 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [910]  (1.13 ns)
+	'select' operation ('select_ln340_2087', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [911]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [948]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [956]  (1.13 ns)
+	'select' operation ('select_ln340_2089', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [957]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [994]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1002]  (1.13 ns)
+	'select' operation ('select_ln340_2091', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1003]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1040]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1048]  (1.13 ns)
+	'select' operation ('select_ln340_2093', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1049]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1086]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1094]  (1.13 ns)
+	'select' operation ('select_ln340_2095', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1095]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1132]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1140]  (1.13 ns)
+	'select' operation ('select_ln340_2097', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1141]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1178]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1186]  (1.13 ns)
+	'select' operation ('select_ln340_2099', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1187]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1224]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1232]  (1.13 ns)
+	'select' operation ('select_ln340_2101', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1233]  (1.13 ns)
+	'add' operation ('add_ln1192_537', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1269]  (2.01 ns)
+	'and' operation ('and_ln786_1591', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1274]  (0 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1279]  (1.13 ns)
+	'select' operation ('tmp.data[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1280]  (1.13 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 26.41 seconds; current allocated memory: 614.877 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 34.86 seconds; current allocated memory: 650.586 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad1d_cl_array_array_ap_fixed_24_16_0_0_0_8u_config20_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.26 seconds; current allocated memory: 656.123 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 656.462 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_4u_config8_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'KernelShiftWidth'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'ReuseLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+WARNING: [SCHED 204-21] Estimated clock period (85.56ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_4u_config8_s' consists of the following:
+	'phi' operation ('tmp.data[0].V') with incoming values : ('tmp.data[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [338]  (0 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [384]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [392]  (1.13 ns)
+	'select' operation ('select_ln340_2385', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [393]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [430]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [438]  (1.13 ns)
+	'select' operation ('select_ln340_2387', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [439]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [476]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [484]  (1.13 ns)
+	'select' operation ('select_ln340_2389', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [485]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [522]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [530]  (1.13 ns)
+	'select' operation ('select_ln340_2391', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [531]  (1.13 ns)
+	'add' operation ('add_ln1192_681', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [566]  (2.01 ns)
+	'and' operation ('and_ln786_1881', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [571]  (0 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [576]  (1.13 ns)
+	'select' operation ('select_ln340_2393', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [577]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [614]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [622]  (1.13 ns)
+	'select' operation ('select_ln340_2395', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [623]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [660]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [668]  (1.13 ns)
+	'select' operation ('select_ln340_2397', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [669]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [706]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [714]  (1.13 ns)
+	'select' operation ('select_ln340_2399', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [715]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [752]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [760]  (1.13 ns)
+	'select' operation ('select_ln340_2401', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [761]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [798]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [806]  (1.13 ns)
+	'select' operation ('select_ln340_2403', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [807]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [844]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [852]  (1.13 ns)
+	'select' operation ('select_ln340_2405', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [853]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [890]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [898]  (1.13 ns)
+	'select' operation ('select_ln340_2407', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [899]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [936]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [944]  (1.13 ns)
+	'select' operation ('select_ln340_2409', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [945]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [982]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [990]  (1.13 ns)
+	'select' operation ('select_ln340_2411', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [991]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1028]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1036]  (1.13 ns)
+	'select' operation ('select_ln340_2413', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1037]  (1.13 ns)
+	'add' operation ('add_ln1192_692', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1072]  (2.01 ns)
+	'and' operation ('and_ln786_1903', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1077]  (0 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1082]  (1.13 ns)
+	'select' operation ('select_ln340_2415', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1083]  (1.13 ns)
+	'add' operation ('add_ln1192_693', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1118]  (2.01 ns)
+	'and' operation ('and_ln786_1905', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1123]  (0 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1128]  (1.13 ns)
+	'select' operation ('select_ln340_2417', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1129]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1166]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1174]  (1.13 ns)
+	'select' operation ('select_ln340_2419', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1175]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1212]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1220]  (1.13 ns)
+	'select' operation ('select_ln340_2421', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1221]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1259]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1267]  (1.13 ns)
+	'select' operation ('tmp.data[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [1268]  (1.13 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 9.77 seconds; current allocated memory: 671.290 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 17.59 seconds; current allocated memory: 693.658 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad1d_cl_array_array_ap_fixed_24_16_0_0_0_4u_config21_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.1 seconds; current allocated memory: 696.537 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 696.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_1d_cl_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_4u_config11_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'KernelShiftWidth'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'ReuseLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+WARNING: [SCHED 204-21] Estimated clock period (42.78ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'conv_1d_cl_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_4u_config11_s' consists of the following:
+	'phi' operation ('tmp.data[0].V') with incoming values : ('tmp.data[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [194]  (0 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [240]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [248]  (1.13 ns)
+	'select' operation ('select_ln340_2545', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [249]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [286]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [294]  (1.13 ns)
+	'select' operation ('select_ln340_2547', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [295]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [332]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [340]  (1.13 ns)
+	'select' operation ('select_ln340_2549', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [341]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [378]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [386]  (1.13 ns)
+	'select' operation ('select_ln340_2551', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [387]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [424]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [432]  (1.13 ns)
+	'select' operation ('select_ln340_2553', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [433]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [470]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [478]  (1.13 ns)
+	'select' operation ('select_ln340_2555', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [479]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [516]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [524]  (1.13 ns)
+	'select' operation ('select_ln340_2557', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [525]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [562]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [570]  (1.13 ns)
+	'select' operation ('select_ln340_2559', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [571]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [608]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [616]  (1.13 ns)
+	'select' operation ('select_ln340_2561', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [617]  (1.13 ns)
+	'add' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [655]  (2.01 ns)
+	'select' operation ('acc[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [663]  (1.13 ns)
+	'select' operation ('tmp.data[0].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_conv_stream.h:368->firmware/nnet_utils/nnet_conv1d_stream.h:69->firmware/nnet_utils/nnet_conv1d_stream.h:80) [664]  (1.13 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.98 seconds; current allocated memory: 704.292 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 8.06 seconds; current allocated memory: 711.654 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_wrapper_ap_fixed_24_16_0_0_0_ap_fixed_24_16_0_0_0_config15_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ReuseLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+WARNING: [SCHED 204-21] Estimated clock period (136.896ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'dense_wrapper_ap_fixed_24_16_0_0_0_ap_fixed_24_16_0_0_0_config15_s' consists of the following:
+	'phi' operation ('res_15_V_write_assign35', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) with incoming values : ('res[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [135]  (0 ns)
+	'add' operation ('add_ln1192_480', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20544]  (2.01 ns)
+	'and' operation ('and_ln786_1473', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20549]  (0 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20554]  (1.13 ns)
+	'select' operation ('select_ln340_1985', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20555]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20588]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20596]  (1.13 ns)
+	'select' operation ('select_ln340_1987', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20597]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20630]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20638]  (1.13 ns)
+	'select' operation ('select_ln340_1989', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20639]  (1.13 ns)
+	'add' operation ('add_ln1192_483', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20670]  (2.01 ns)
+	'and' operation ('and_ln786_1479', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20675]  (0 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20680]  (1.13 ns)
+	'select' operation ('select_ln340_1991', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20681]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20714]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20722]  (1.13 ns)
+	'select' operation ('select_ln340_1993', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20723]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20756]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20764]  (1.13 ns)
+	'select' operation ('select_ln340_1995', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20765]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20798]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20806]  (1.13 ns)
+	'select' operation ('select_ln340_1997', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20807]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20840]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20848]  (1.13 ns)
+	'select' operation ('select_ln340_1999', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20849]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20882]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20890]  (1.13 ns)
+	'select' operation ('select_ln340_2001', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20891]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20924]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20932]  (1.13 ns)
+	'select' operation ('select_ln340_2003', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20933]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20966]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20974]  (1.13 ns)
+	'select' operation ('select_ln340_2005', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [20975]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21008]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21016]  (1.13 ns)
+	'select' operation ('select_ln340_2007', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21017]  (1.13 ns)
+	'add' operation ('add_ln1192_492', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21048]  (2.01 ns)
+	'and' operation ('and_ln786_1497', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21053]  (0 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21058]  (1.13 ns)
+	'select' operation ('select_ln340_2009', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21059]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21092]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21100]  (1.13 ns)
+	'select' operation ('select_ln340_2011', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21101]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21134]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21142]  (1.13 ns)
+	'select' operation ('select_ln340_2013', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21143]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21176]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21184]  (1.13 ns)
+	'select' operation ('select_ln340_2015', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21185]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21218]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21226]  (1.13 ns)
+	'select' operation ('select_ln340_2017', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21227]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21260]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21268]  (1.13 ns)
+	'select' operation ('select_ln340_2019', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21269]  (1.13 ns)
+	'add' operation ('add_ln1192_498', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21300]  (2.01 ns)
+	'and' operation ('and_ln786_1509', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21305]  (0 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21310]  (1.13 ns)
+	'select' operation ('select_ln340_2021', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21311]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21344]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21352]  (1.13 ns)
+	'select' operation ('select_ln340_2023', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21353]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21386]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21394]  (1.13 ns)
+	'select' operation ('select_ln340_2025', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21395]  (1.13 ns)
+	'add' operation ('add_ln1192_501', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21426]  (2.01 ns)
+	'and' operation ('and_ln786_1515', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21431]  (0 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21436]  (1.13 ns)
+	'select' operation ('select_ln340_2027', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21437]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21470]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21478]  (1.13 ns)
+	'select' operation ('select_ln340_2029', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21479]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21512]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21520]  (1.13 ns)
+	'select' operation ('select_ln340_2031', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21521]  (1.13 ns)
+	'add' operation ('add_ln1192_504', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21552]  (2.01 ns)
+	'and' operation ('and_ln786_1521', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21557]  (0 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21562]  (1.13 ns)
+	'select' operation ('select_ln340_2033', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21563]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21596]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21604]  (1.13 ns)
+	'select' operation ('select_ln340_2035', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21605]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21638]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21646]  (1.13 ns)
+	'select' operation ('select_ln340_2037', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21647]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21680]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21688]  (1.13 ns)
+	'select' operation ('select_ln340_2039', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21689]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21722]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21730]  (1.13 ns)
+	'select' operation ('select_ln340_2041', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21731]  (1.13 ns)
+	'add' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21764]  (2.01 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21772]  (1.13 ns)
+	'select' operation ('select_ln340_2043', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21773]  (1.13 ns)
+	'add' operation ('add_ln1192_510', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21804]  (2.01 ns)
+	'and' operation ('and_ln786_1533', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21809]  (0 ns)
+	'select' operation ('acc[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21814]  (1.13 ns)
+	'select' operation ('select_ln340_2045', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21815]  (1.13 ns)
+	'add' operation ('add_ln1192_511', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21848]  (2.01 ns)
+	'and' operation ('and_ln786_1535', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21853]  (0 ns)
+	'select' operation ('select_ln388_1023', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21858]  (1.13 ns)
+	'select' operation ('res[15].V', firmware/nnet_utils/nnet_dense_resource.h:56->firmware/nnet_utils/nnet_dense_resource.h:253->firmware/nnet_utils/nnet_dense_stream.h:21) [21859]  (1.13 ns)
+	'insertvalue' operation ('mrv_14', firmware/nnet_utils/nnet_dense_stream.h:23) [21880]  (0 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 366.76 seconds; current allocated memory: 787.028 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 136.19 seconds; current allocated memory: 885.497 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_16u_config15_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'DataPrepare'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+WARNING: [SCHED 204-21] Estimated clock period (136.896ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'dense_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_16u_config15_s' consists of the following:
+	'call' operation ('call_ret', firmware/nnet_utils/nnet_dense_stream.h:48) to 'dense_wrapper<ap_fixed<24, 16, 0, 0, 0>, ap_fixed<24, 16, 0, 0, 0>, config15>' [391]  (137 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 113.71 seconds; current allocated memory: 903.695 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 5.05 seconds; current allocated memory: 909.937 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'linear_array_array_ap_fixed_16_16_0_0_0_16u_linear_config17_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'linear<array,array<ap_fixed<16,16,0,0,0>,16u>,linear_config17>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.54 seconds; current allocated memory: 925.287 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.11 seconds; current allocated memory: 926.296 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Encoder' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.09 seconds; current allocated memory: 926.805 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 28.56 seconds; current allocated memory: 965.620 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'zeropad1d_cl_array_ap_int_16_1u_array_ap_int_16_1u_config18_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'zeropad1d_cl_array_ap_int_16_1u_array_ap_int_16_1u_config18_s'.
+INFO: [HLS 200-111]  Elapsed time: 17.77 seconds; current allocated memory: 989.153 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_1d_cl_array_ap_int_16_1u_array_ap_fixed_24_16_0_0_0_8u_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_3_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_3_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'sX' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pX' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_3_0' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'Encoder_mul_mul_16s_7s_23_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Encoder_mul_mul_16s_8s_24_1_1': 7 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_1d_cl_array_ap_int_16_1u_array_ap_fixed_24_16_0_0_0_8u_config2_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 991.884 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'zeropad1d_cl_array_array_ap_fixed_24_16_0_0_0_8u_config19_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'zeropad1d_cl_array_array_ap_fixed_24_16_0_0_0_8u_config19_s'.
+INFO: [HLS 200-111]  Elapsed time: 2.22 seconds; current allocated memory: 999.493 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_8u_config5_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'sX_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pX_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_31' is power-on initialization.
+INFO: [RTGEN 206-104] Estimated max fanout for 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_8u_config5_s' is 8881 from HDL expression: (1'b0 == ap_block_pp1_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'Encoder_mul_mul_8s_24s_32_1_1': 159 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_8u_config5_s'.
+INFO: [HLS 200-111]  Elapsed time: 1.37 seconds; current allocated memory: 1.019 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'zeropad1d_cl_array_array_ap_fixed_24_16_0_0_0_8u_config20_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'zeropad1d_cl_array_array_ap_fixed_24_16_0_0_0_8u_config20_s'.
+INFO: [HLS 200-111]  Elapsed time: 45.25 seconds; current allocated memory: 1.159 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_4u_config8_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'sX_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pX_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_31' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'Encoder_mul_mul_24s_7s_31_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Encoder_mul_mul_24s_8s_32_1_1': 79 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_4u_config8_s'.
+INFO: [HLS 200-111]  Elapsed time: 2.41 seconds; current allocated memory: 1.181 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'zeropad1d_cl_array_array_ap_fixed_24_16_0_0_0_4u_config21_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'zeropad1d_cl_array_array_ap_fixed_24_16_0_0_0_4u_config21_s'.
+INFO: [HLS 200-111]  Elapsed time: 24.9 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_1d_cl_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_4u_config11_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'sX_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pX_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1155' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2156' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_3157' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_15' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'Encoder_mul_mul_24s_6s_30_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Encoder_mul_mul_24s_8s_32_1_1': 39 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_1d_cl_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_4u_config11_s'.
+INFO: [HLS 200-111]  Elapsed time: 2.93 seconds; current allocated memory: 1.264 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_wrapper_ap_fixed_24_16_0_0_0_ap_fixed_24_16_0_0_0_config15_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'dense_wrapper_ap_fixed_24_16_0_0_0_ap_fixed_24_16_0_0_0_config15_s' is 29121 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'Encoder_mul_mul_8s_24s_32_1_1': 511 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_wrapper_ap_fixed_24_16_0_0_0_ap_fixed_24_16_0_0_0_config15_s'.
+INFO: [HLS 200-111]  Elapsed time: 19.31 seconds; current allocated memory: 1.435 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_16u_config15_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_16u_config15_s'.
+INFO: [HLS 200-111]  Elapsed time: 169.59 seconds; current allocated memory: 1.837 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'linear_array_array_ap_fixed_16_16_0_0_0_16u_linear_config17_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'linear_array_array_ap_fixed_16_16_0_0_0_16u_linear_config17_s'.
+INFO: [HLS 200-111]  Elapsed time: 19.46 seconds; current allocated memory: 1.856 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Encoder' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/input_time_series_V_data_0_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_0_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_1_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_2_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_3_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_4_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_5_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_6_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_7_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_8_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_9_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_10_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_11_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_12_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_13_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_14_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Encoder/layer17_out_V_data_15_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'Encoder' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'start_for_conv_1d_cl_array_ap_int_16_1u_array_ap_fixed_24_16_0_0_0_8u_config2_U0' to 'start_for_conv_1d_cl_array_ap_int_16_1u_array_ap_fixed_24_16_0_0_0_8u_config2bkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'start_for_conv_1d_cl_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_4u_config11_U0' to 'start_for_conv_1d_cl_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_4u_config11cud' due to the length limit 80
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Encoder'.
+INFO: [HLS 200-111]  Elapsed time: 8.44 seconds; current allocated memory: 1.862 GB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 7.30 MHz
+INFO: [RTMG 210-279] Implementing memory 'conv_1d_cl_array_ap_int_16_1u_array_ap_fixed_24_16_0_0_0_8u_config2_s_w2_V_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_8u_config5_s_w5_V_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_1d_cl_array_ap_fixed_8u_array_ap_fixed_24_16_0_0_0_4u_config8_s_w8_V_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_1d_cl_array_ap_fixed_4u_array_ap_fixed_24_16_0_0_0_4u_config11_s_w11_V_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dense_wrapper_ap_fixed_24_16_0_0_0_ap_fixed_24_16_0_0_0_config15_s_w15_V_rom' using auto ROMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer18_out_V_data_0_V_U(fifo_w16_d66_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer2_out_V_data_0_V_U(fifo_w24_d64_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer2_out_V_data_1_V_U(fifo_w24_d64_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer2_out_V_data_2_V_U(fifo_w24_d64_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer2_out_V_data_3_V_U(fifo_w24_d64_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer2_out_V_data_4_V_U(fifo_w24_d64_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer2_out_V_data_5_V_U(fifo_w24_d64_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer2_out_V_data_6_V_U(fifo_w24_d64_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer2_out_V_data_7_V_U(fifo_w24_d64_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer19_out_V_data_0_V_U(fifo_w24_d68_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer19_out_V_data_1_V_U(fifo_w24_d68_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer19_out_V_data_2_V_U(fifo_w24_d68_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer19_out_V_data_3_V_U(fifo_w24_d68_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer19_out_V_data_4_V_U(fifo_w24_d68_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer19_out_V_data_5_V_U(fifo_w24_d68_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer19_out_V_data_6_V_U(fifo_w24_d68_A)' using Block RAMs.
